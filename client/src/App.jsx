@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Login from './Login';
-import Signup from './Signup';
+import Login from './auth/Login';
+import Signup from './auth/Signup';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
 
 class App extends Component {
@@ -79,15 +84,23 @@ class App extends Component {
       );
     } else {
       contents = (
-        <>
-        <p>Please signup or login</p>
-        <Login liftToken={this.liftToken}/>
-        <Signup liftToken={this.liftToken}/>
-        </>
+        <Router>
+          <Route exact path='/' 
+          render={() => <Login liftToken={this.liftToken}/>} />
+          <Route path='/signup' component={Signup}/>
+        </Router>
       )
     }
     return(
-      <h1>{contents}</h1>
+      <div>
+        <nav>
+          <a>Logo</a> |
+          <a>Contact</a>|
+          <a>About</a>
+        </nav>
+        <h1>{contents}</h1>
+      </div>
+      
     );
   }
 }

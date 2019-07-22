@@ -67,6 +67,7 @@ class Signup extends React.Component{
                            placeholder='Enter your password...'/><br/>
                     <input type="submit" value='Sign up!'/>       
                 </form>
+                <a href="/">Back</a>
             </div>
         );
     }

@@ -1,5 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom';
+import Signup from './Signup';
+  
 
 class Login extends React.Component{
     constructor(props){
@@ -59,6 +66,7 @@ class Login extends React.Component{
                                        placeholder='Enter your password...'/> <br/>
                     <input type="submit" value='Login'/>
                 </form>
+                <a href="/signup">Don't have an account? Sign up here !!</a>
             </div>
         );
     }
