@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
+import Home from './components/Home';
 import {
   BrowserRouter as Router,
   Route,
@@ -92,15 +93,15 @@ class App extends Component {
       )
     }
     return(
-      <div>
-        <nav>
-          <a>Logo</a> |
-          <a>Contact</a>|
-          <a>About</a>
-        </nav>
-        <h1>{contents}</h1>
-      </div>
-      
+      // <div>
+      //   <nav>
+      //     <a>Logo</a> |
+      //     <a>Contact</a>|
+      //     <a>About</a>
+      //   </nav>
+      //   <h1>{contents}</h1>
+      // </div>
+      <Home />
     );
   }
 }

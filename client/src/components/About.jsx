@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = (props) => {
 
-    const aboutInfo = (
+    return(
         <div>
             <div>
                 <h1>Welcome to Foodielicious!</h1>
@@ -26,11 +26,7 @@ const About = (props) => {
                         <p>Email: x@x.com</p>
             </div>
         </div>
-    )
-
-    return (
-        aboutInfo
-    )
+    );
 }
   
 export default About;
